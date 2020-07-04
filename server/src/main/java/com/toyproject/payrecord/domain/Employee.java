@@ -28,8 +28,12 @@ public class Employee extends BaseEntity{
     @Column(name = "password", length = 255, nullable = true)
     private String password;
 
+    @ApiModelProperty(value = "fcm토큰", required = false)
     @Column(name = "fcm_token", length = 255, nullable = true)
     private String fcmToken;
+
+    @ApiModelProperty(value = "회사ID", required = true)
+    private Long companyId;
 
     public Employee(String name, String email, String password, String fcmToken) {
         validate(name, email, password);
