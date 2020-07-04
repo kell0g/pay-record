@@ -16,7 +16,7 @@ import static javax.persistence.FetchType.LAZY;
 
 
 @Entity
-@Table(name = "days")
+@Table(name = "day")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Day {
 
