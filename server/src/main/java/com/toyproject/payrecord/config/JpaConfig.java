@@ -1,0 +1,10 @@
+package com.toyproject.payrecord.config;
+
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+@EnableJpaAuditing
+public class JpaConfig {
+}
