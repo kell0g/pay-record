@@ -5,9 +5,7 @@ import com.toyproject.payrecord.global.utils.StringUtils;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "timeline")
@@ -17,6 +15,13 @@ public class Timeline extends BaseEntity {
 
     @Column(name = "event", length = 40, nullable = false)
     private String event;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumns({
+            @JoinColumn(name = "employee_id"),
+            @JoinColumn(name = "date")
+    })
+    private Day day;
 
     public Timeline(String event) {
         if (StringUtils.isBlank(event)) {
