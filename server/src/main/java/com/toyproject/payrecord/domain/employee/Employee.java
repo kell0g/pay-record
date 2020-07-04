@@ -1,20 +1,22 @@
-package com.toyproject.payrecord.domain;
+package com.toyproject.payrecord.domain.employee;
 
+import com.toyproject.payrecord.domain.BaseEntity;
+import com.toyproject.payrecord.domain.company.Company;
 import com.toyproject.payrecord.global.utils.StringUtils;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Table(name = "employee")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Employee extends BaseEntity{
+public class Employee extends BaseEntity {
 
     @ApiModelProperty(value = "이름", required = false)
     @Column(name = "name", length = 30, nullable = true)
@@ -32,8 +34,9 @@ public class Employee extends BaseEntity{
     @Column(name = "fcm_token", length = 255, nullable = true)
     private String fcmToken;
 
-    @ApiModelProperty(value = "회사ID", required = true)
-    private Long companyId;
+    @OneToOne(fetch = LAZY)
+    @JoinColumn(name = "company_id")
+    private Company company;
 
     public Employee(String name, String email, String password, String fcmToken) {
         validate(name, email, password);
