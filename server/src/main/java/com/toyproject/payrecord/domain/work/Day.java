@@ -1,7 +1,6 @@
 package com.toyproject.payrecord.domain.work;
 
 
-import com.toyproject.payrecord.domain.BaseEntity;
 import com.toyproject.payrecord.domain.employee.Employee;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

@@ -25,5 +25,5 @@ public class Company extends BaseEntity {
     private Address address;
 
     @OneToOne(mappedBy = "company", fetch = LAZY)
-    private Employee member;
+    private Employee employee;
 }

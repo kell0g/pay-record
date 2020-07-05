@@ -1,12 +1,10 @@
 package com.toyproject.payrecord.domain.work;
 
-import com.toyproject.payrecord.domain.employee.Employee;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.junit.jupiter.api.Assertions.*;
 
 class TimelineTest {
 
