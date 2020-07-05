@@ -18,6 +18,11 @@ import static javax.persistence.FetchType.LAZY;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Employee extends BaseEntity {
 
+    @Id
+    @Column(name = "employee_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @ApiModelProperty(value = "이름", required = false)
     @Column(name = "name", length = 30, nullable = true)
     private String name;

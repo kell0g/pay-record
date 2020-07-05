@@ -38,6 +38,10 @@ public class Day {
     private int planTime;
     private int remainTime;
 
+    private int timePay;
+
+    private String month;
+
     @OneToMany(mappedBy = "day", cascade = CascadeType.ALL)
     private List<Timeline> timelines = new ArrayList<>();
 

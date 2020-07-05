@@ -13,6 +13,11 @@ import javax.persistence.*;
 public class Timeline extends BaseEntity {
     private static final String NULL_NOT_ALLOW = "공백을 입력할 수 없습니다.";
 
+    @Id
+    @Column(name = "timeline_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @Column(name = "event", length = 40, nullable = false)
     private String event;
 
