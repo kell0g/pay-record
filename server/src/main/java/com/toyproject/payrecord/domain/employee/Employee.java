@@ -5,6 +5,7 @@ import com.toyproject.payrecord.domain.company.Company;
 import com.toyproject.payrecord.global.utils.StringUtils;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -42,6 +43,10 @@ public class Employee extends BaseEntity {
     @OneToOne(fetch = LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
+
+    public Employee(String name, String email, String password) {
+        this(name, email,password, null);
+    }
 
     public Employee(String name, String email, String password, String fcmToken) {
         validate(name, email, password);
