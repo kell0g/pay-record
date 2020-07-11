@@ -1,6 +1,6 @@
-package com.toyproject.payrecord.domain.work;
+package com.toyproject.payrecord.domain.work.domain;
 
-import com.toyproject.payrecord.domain.BaseEntity;
+import com.toyproject.payrecord.config.BaseEntity;
 import com.toyproject.payrecord.global.utils.StringUtils;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AccessLevel;

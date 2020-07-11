@@ -1,5 +1,7 @@
-package com.toyproject.payrecord.domain.employee;
+package com.toyproject.payrecord.domain.employee.ui;
 
+import com.toyproject.payrecord.domain.employee.application.EmpService;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 import com.toyproject.payrecord.dto.SingUpRequest;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;

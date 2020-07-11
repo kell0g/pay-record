@@ -15,11 +15,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .cors()
-                .disable()
+                    .disable()
                 .csrf()
-                .disable()
+                    .disable()
                 .formLogin()
-                .disable()
-                .headers().frameOptions().disable();
+                    .disable()
+                .headers().frameOptions()
+                    .disable();
     }
 }

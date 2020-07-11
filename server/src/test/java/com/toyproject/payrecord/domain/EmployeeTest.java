@@ -1,6 +1,6 @@
 package com.toyproject.payrecord.domain;
 
-import com.toyproject.payrecord.domain.employee.Employee;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

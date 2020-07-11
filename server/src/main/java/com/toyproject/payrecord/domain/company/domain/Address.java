@@ -1,4 +1,4 @@
-package com.toyproject.payrecord.domain.company;
+package com.toyproject.payrecord.domain.company.domain;
 
 import lombok.Getter;
 

@@ -1,9 +1,9 @@
-package com.toyproject.payrecord.domain.employee;
+package com.toyproject.payrecord.domain.employee.application;
 
+import com.toyproject.payrecord.domain.employee.domain.EmpRepository;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import javax.validation.constraints.Email;
 
 @Service
 @RequiredArgsConstructor

@@ -1,4 +1,4 @@
-package com.toyproject.payrecord.domain;
+package com.toyproject.payrecord.config;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.toyproject.payrecord.health;
+package com.toyproject.payrecord;
 
 
 import io.swagger.annotations.Api;

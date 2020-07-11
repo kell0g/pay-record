@@ -1,4 +1,4 @@
-package com.toyproject.payrecord.domain.work;
+package com.toyproject.payrecord.domain.work.domain;
 
 import lombok.*;
 
