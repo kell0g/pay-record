@@ -26,4 +26,8 @@ public class Company extends BaseEntity {
 
     @OneToOne(mappedBy = "company", fetch = LAZY)
     private Employee employee;
+    
+    // 0719 add, kdh
+    // unique key 
+    private String CompanyName;
 }
