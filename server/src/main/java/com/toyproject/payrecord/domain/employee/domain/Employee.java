@@ -4,6 +4,7 @@ import static javax.persistence.FetchType.LAZY;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -53,7 +54,8 @@ public class Employee extends BaseEntity {
 	@Column(name = "fcm_token", length = 255, nullable = true)
 	private String fcmToken;
 
-	@OneToOne(fetch = LAZY)
+	// CASCADE 추가
+	@OneToOne(fetch = LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "company_id")
 	private Company company;
 

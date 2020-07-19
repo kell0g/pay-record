@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 public class CompanyDto {
 	
-	private String CompanyName;
+	private String name;
 	
 	@Embedded
 	private Address address;

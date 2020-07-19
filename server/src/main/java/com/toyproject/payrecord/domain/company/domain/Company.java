@@ -1,18 +1,28 @@
 package com.toyproject.payrecord.domain.company.domain;
 
+import static javax.persistence.FetchType.LAZY;
+
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 import com.toyproject.payrecord.config.BaseEntity;
 import com.toyproject.payrecord.domain.employee.domain.Employee;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-
-import static javax.persistence.FetchType.LAZY;
+import lombok.Setter;
 
 @Entity
 @Table(name = "company")
 @Getter
+@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Company extends BaseEntity {
 
@@ -29,5 +39,5 @@ public class Company extends BaseEntity {
     
     // 0719 add, kdh
     // unique key 
-    private String CompanyName;
+    private String name;
 }

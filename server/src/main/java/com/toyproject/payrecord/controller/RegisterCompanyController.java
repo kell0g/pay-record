@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.toyproject.payrecord.domain.company.CompanyDto;
 import com.toyproject.payrecord.domain.company.domain.Company;
 import com.toyproject.payrecord.domain.employee.domain.Employee;
@@ -27,27 +28,36 @@ import lombok.extern.slf4j.Slf4j;
 public class RegisterCompanyController {
 	@Autowired
 	private EmployeeService userService;
-	
+
 	/*
-	 *  1. 회원가입 후,   /api/v1/register
+	 * 1. 회원가입 후, /api/v1/register
 	 * 
 	 */
-	@RequestMapping(method = RequestMethod.POST, value = "/api/v1/register")
+	@RequestMapping(method = RequestMethod.POST, value = "/register")
 	@PreAuthorize("hasRole('ROLE_EMPLOYEE')")
-	public ResponseEntity<String> registerCompany(HttpServletRequest req, @RequestBody CompanyDto companyDto){
+	public ResponseEntity<String> registerCompany(HttpServletRequest req, @RequestBody CompanyDto companyDto) {
 		ModelMapper modelMapper = new ModelMapper();
-		
+		ObjectMapper objectMapper = new ObjectMapper();
+		log.info(companyDto.getName());
 		// Receive CompnayDto and mapper to Company
-		Company company = modelMapper.map(companyDto, Company.class);
+		System.err.println(companyDto.getAddress().getCity());
 		
+		
+
 		// using jwt, find employee information
 		Employee employee = modelMapper.map(userService.whoami(req), Employee.class);
-		userService.registerCompany(employee, company);
 		
+		// nested json... how to handle.. T__T
+		Company company = modelMapper.map(companyDto, Company.class);
+		//company.setAddress(companyDto.getAddress());
+		log.info(company.getAddress().getCity());
+		
+		
+		userService.registerCompany(employee, company);
+
 		return new ResponseEntity<>("G__G?", HttpStatus.BAD_REQUEST);
 	}
-	
-	
+
 }
 
 //@GetMapping(value = "/me")

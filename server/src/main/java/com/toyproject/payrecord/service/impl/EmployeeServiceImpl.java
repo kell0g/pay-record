@@ -62,6 +62,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	// Register company
 	@Override
 	public void registerCompany(Employee employee, Company company) {
+		log.info("RegisterCompany!!!!");
 		employee.setCompany(company);
 		userRepository.save(employee);
 	}
