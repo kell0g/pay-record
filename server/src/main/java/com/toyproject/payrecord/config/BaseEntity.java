@@ -1,4 +1,4 @@
-package com.toyproject.payrecord.domain;
+package com.toyproject.payrecord.config;
 
 import java.time.LocalDateTime;
 

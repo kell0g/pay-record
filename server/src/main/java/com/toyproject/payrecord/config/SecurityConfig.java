@@ -23,30 +23,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http
-//                .cors()
-//                .disable()
-//                .csrf()
-//                .disable()
-//                .formLogin()
-//                .disable()
-//                .headers().frameOptions().disable();
-//    }
-
 	@Autowired
 	private JwtTokenProvider jwtTokenProvider;
 
 	@Autowired
 	private UserDetailsService userDetailsService;
-
-	// 구현하기
-//	@Autowired
-//	private CustomAuthenticationSuccessHandler successHandler;
-//	
-//	@Autowired
-//	private CustomAuthenticationFailureHandler failureHandler;
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {

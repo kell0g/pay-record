@@ -1,5 +1,6 @@
 package com.toyproject.payrecord.domain.work;
 
+import com.toyproject.payrecord.domain.work.domain.Timeline;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;

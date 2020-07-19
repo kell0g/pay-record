@@ -10,8 +10,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.toyproject.payrecord.domain.company.Company;
-import com.toyproject.payrecord.domain.employee.Employee;
+import com.toyproject.payrecord.domain.company.domain.Company;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 import com.toyproject.payrecord.exception.CustomException;
 import com.toyproject.payrecord.repository.EmployeeRepository;
 import com.toyproject.payrecord.security.provider.JwtTokenProvider;

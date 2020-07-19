@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
-import com.toyproject.payrecord.domain.employee.Employee;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 
 import lombok.Data;
 

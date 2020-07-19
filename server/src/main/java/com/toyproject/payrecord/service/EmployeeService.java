@@ -2,8 +2,8 @@ package com.toyproject.payrecord.service;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.toyproject.payrecord.domain.company.Company;
-import com.toyproject.payrecord.domain.employee.Employee;
+import com.toyproject.payrecord.domain.company.domain.Company;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 
 public interface EmployeeService {
 	

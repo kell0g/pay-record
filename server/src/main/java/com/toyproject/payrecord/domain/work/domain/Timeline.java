@@ -1,7 +1,8 @@
-package com.toyproject.payrecord.domain.work;
+package com.toyproject.payrecord.domain.work.domain;
 
-import com.toyproject.payrecord.domain.BaseEntity;
+import com.toyproject.payrecord.config.BaseEntity;
 import com.toyproject.payrecord.global.utils.StringUtils;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -19,6 +20,7 @@ public class Timeline extends BaseEntity {
     private Long id;
 
     @Column(name = "event", length = 40, nullable = false)
+    @ApiModelProperty(value = "발생 이벤트", required = false)
     private String event;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.toyproject.payrecord.domain.employee.Employee;
 import com.toyproject.payrecord.domain.employee.EmployeeDto;
 import com.toyproject.payrecord.domain.employee.Role;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 import com.toyproject.payrecord.service.EmployeeService;
 
 import io.swagger.annotations.Api;

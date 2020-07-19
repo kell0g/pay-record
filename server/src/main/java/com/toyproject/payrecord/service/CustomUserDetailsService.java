@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.toyproject.payrecord.domain.employee.Employee;
+import com.toyproject.payrecord.domain.employee.domain.Employee;
 import com.toyproject.payrecord.repository.EmployeeRepository;
 import com.toyproject.payrecord.service.impl.AccountContext;
 
